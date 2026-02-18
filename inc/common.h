@@ -50,7 +50,7 @@ void sing_line(const char *lyric, double seconds);
 void lyrics_intro();
 
 void setup_io();
-void check_sight();
+// void check_sight();
 void emergency_recovery(int signum);
 void backdoor();
 
