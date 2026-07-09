@@ -42,18 +42,35 @@ To skip lyric delays:
 VOCA_FAST=1 ./vocaend
 ```
 
-## Docker
+## Solve Path
 
-The provided `Dockerfile` builds and runs the service with `socat`:
+The intended archived solve path is documented in `WRITEUP.md`. A local
+regression helper is also available:
 
 ```sh
-docker build -t vocaend .
+make
+tools/solve_local.py
+```
+
+The helper uses a PTY and sends inputs step by step. Piping the full transcript
+at once is not equivalent to the original interaction because the challenge uses
+raw `read(2)` calls.
+
+## Legacy Docker
+
+The original competition deployment has been moved to `legacy/Dockerfile`. It is
+kept for archival reference and is no longer the recommended local run path:
+
+```sh
+docker build -f legacy/Dockerfile -t vocaend .
 docker run --rm -p 9999:9999 -e GZCTF_FLAG=flag{test} vocaend
 ```
 
 ## Layout
 
 - `src/` challenge source code
-- `inc/` headers and lyric macros
+- `inc/` focused headers and lyric macros
 - `data/` song text files and runtime artifacts
 - `build/` build intermediates
+- `legacy/` original competition deployment files
+- `tools/` local archival verification helpers

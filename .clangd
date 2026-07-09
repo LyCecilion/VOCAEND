@@ -1,2 +1,15 @@
-Index:
-  Background: Skip
+CompileFlags:
+  Add:
+    - -Wall
+    - -Wextra
+    - -Wshadow
+    - -Wconversion
+    - -Wno-sign-conversion
+    - -Wpedantic
+    - -Wformat=2
+    - -Wnull-dereference
+    - -Wdouble-promotion
+    - -Wimplicit-fallthrough
+    - -Wvla
+    - -DLOCAL
+    - -std=gnu17

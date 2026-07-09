@@ -12,7 +12,12 @@ DEPS := $(OBJS:.o=.d)
 TARGET := $(DATA_DIR)/vocaend
 
 CFLAGS ?= -O2 -Wall
-CFLAGS += -I$(INC_DIR) -fstack-protector-all -MMD -MP
+CFLAGS += -I$(INC_DIR) -std=gnu17 -fstack-protector-all -MMD -MP \
+	-Wextra -Wshadow -Wconversion -Wno-sign-conversion -Wpedantic \
+	-Wformat=2 -Wnull-dereference -Wdouble-promotion \
+	-Wimplicit-fallthrough -Wvla \
+	-Wno-error=format-security -Wno-format-security -Wno-format-nonliteral \
+	-Wno-unused-result
 LDFLAGS ?= -no-pie -lm -z lazy -s
 
 .PHONY: all clean

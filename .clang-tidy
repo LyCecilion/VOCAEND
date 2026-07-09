@@ -1,0 +1,24 @@
+Checks: >
+  clang-diagnostic-*,
+  clang-analyzer-*,
+  bugprone-*,
+  cert-*,
+  performance-*,
+  misc-*,
+  -bugprone-easily-swappable-parameters,
+  -bugprone-narrowing-conversions,
+  -cert-dcl37-c,
+  -cert-env33-c,
+  -cert-err33-c,
+  -cert-err34-c,
+  -cert-err58-cpp,
+  -cert-msc50-cpp,
+  -cert-msc51-cpp,
+  -misc-no-recursion,
+  -misc-include-cleaner,
+  -misc-unused-parameters,
+  -misc-use-anonymous-namespace
+
+WarningsAsErrors: ''
+HeaderFilterRegex: '.*'
+FormatStyle: file
