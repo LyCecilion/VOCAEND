@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos,visualstudiocode,vim,c
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,linux,macos,visualstudiocode,vim,c
+# Created by https://www.toptal.com/developers/gitignore/api/c,vim,linux,macos,windows,visualstudiocode,direnv
+# Edit at https://www.toptal.com/developers/gitignore?templates=c,vim,linux,macos,windows,visualstudiocode,direnv
 
 ### C ###
 # Prerequisites
@@ -54,6 +54,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+### direnv ###
+.direnv/
 
 ### Linux ###
 *~
@@ -168,7 +171,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,linux,macos,visualstudiocode,vim,c
+# End of https://www.toptal.com/developers/gitignore/api/c,vim,linux,macos,windows,visualstudiocode,direnv
 
 # VOCAEND local build/runtime artifacts
 /build/
